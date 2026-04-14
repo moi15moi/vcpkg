@@ -31,7 +31,7 @@ function(vcpkg_install_meson)
             endif()
         endif()
         vcpkg_execute_required_process(
-            COMMAND "${NINJA}" install -v
+            COMMAND "${NINJA}" -v install
             WORKING_DIRECTORY "${CURRENT_BUILDTREES_DIR}/${TARGET_TRIPLET}-${short_buildtype}"
             LOGNAME package-${TARGET_TRIPLET}-${short_buildtype}
         )
